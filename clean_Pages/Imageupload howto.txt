@@ -1,0 +1,24 @@
+Fileupload:
+
+<form>
+<p>
+<label for="image">Projektbild (max 2048kB)</label>
+<input type="file" name="image" id="image" />
+</p>
+</form>
+
+=> danach lässt sich der Wert nach einem Submit so auslesen:
+
+if (array_key_exists('image',$_FILES)) 
+{
+	$path = $_FILES['image']['tmp_name'];
+	$type = $_FILES['image']['type'];
+	$data = file_get_contents($path);
+	$base64 = 'data:' . $type . ';base64,' . base64_encode($data);
+}
+
+=> das wird dann in die Datenbank eingetragen:
+
+$inserttoprojects = "insert into projects (projecttitle, goalMoney, goalWork, duration, startdate, enddate, city, description, excerpt, category, imagedata) VALUES ('".$title."',".$goalMoney.",".$goalWork.",".$duration.",".$startdate.",".$enddate.",".$GLOBALS["cityId"].",'".$description."','".$excerpt."','".$category."','".$base64."');";
+
+... natürlich muss das angepasst werden auf den Bedarf, wohin es kommen soll ;-)

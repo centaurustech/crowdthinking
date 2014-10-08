@@ -1,0 +1,21 @@
+Neu dazu:
+
+contact_page				Contactpage-Titel
+contact_info				Text über dem Kontaktformular
+contact_info2				Text über der Adresse
+contact_adress				Adresse
+contact_phone				Telefonnummer
+contact_mail				Email ACHTUNG: "mailto:"" noch ändern! Zeile 153, 164
+contact_about				About-Text
+
+newsletters					Titel auf der day-news page
+day-news_date				Datum auf der Day-news page
+day-news_date1				Daten auf der " (1-3)
+day-news_project_title1
+day-news_project_author1
+day-news_project_location1
+day-news_project_desc1
+day-news_project_comcount1
+day-news_project_views1
+
+connector					File, das included werden muss für DB Verbindung

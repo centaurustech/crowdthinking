@@ -1,0 +1,10 @@
+Image auslesen:
+
+$imageQueryText = "select imagedata from projects where id = ".$projectId.";";
+					$imageQuery = mysqli_query($link, $imageQueryText);
+					$result = mysqli_fetch_array($imageQuery);
+					$img_file = $result["imagedata"];
+					
+anzeigen:
+
+echo '<img src="'.$img_file.'">';
