@@ -1,4 +1,4 @@
-crowdthinking
+Crowdthinking - state of the Art 
 =============
 
 Crowdthinking
